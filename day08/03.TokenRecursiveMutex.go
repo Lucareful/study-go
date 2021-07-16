@@ -1,6 +1,10 @@
-package main
+package day08
 
-import "sync"
+import (
+	"fmt"
+	"sync"
+	"sync/atomic"
+)
 
 // TokenRecursiveMutex 令牌重入锁
 type TokenRecursiveMutex struct {
@@ -10,10 +14,24 @@ type TokenRecursiveMutex struct {
 }
 
 // Lock 加锁
-func (* TokenRecursiveMutex) Lock(){
-	
+func (m *TokenRecursiveMutex) Lock(token int64){
+	if atomic.LoadInt64(&m.token) == token{
+		m.recursive++
+		return
+	}
+	m.Mutex.Lock()
+	atomic.StoreInt64(&m.token, token)
+	m.recursive=1
 }
-
-func main()  {
-	
+// Unlock 解锁
+func (m *TokenRecursiveMutex) Unlock(token int64){
+	if atomic.LoadInt64(&m.token) != token{
+		panic(fmt.Sprintf("wrong of owner(%d):%d",&m.token,token))
+	}
+	m.recursive--
+	if m.recursive == 0{
+		return
+	}
+	atomic.StoreInt64(&m.token, token)
+	m.Mutex.Unlock()
 }
