@@ -3,6 +3,7 @@
 :ledger:go语言学习笔记
 
 ```shell
+.
 ├── README.md
 ├── day01
 │   ├── 1.txt
@@ -72,9 +73,12 @@
 │   ├── demo.xlsx
 │   ├── go.mod
 │   └── go.sum
-└── day08
-    ├── 02.RecursiveMutex.go
-    ├── 03.TokenRecursiveMutex.go
-    └── Mutex使用.go
+├── day08
+│   ├── 02.RecursiveMutex.go
+│   ├── 03.TokenRecursiveMutex.go
+│   ├── Deadlock.go
+│   └── Mutex使用.go
+├── go.mod
+└── go.sum
 ```
 

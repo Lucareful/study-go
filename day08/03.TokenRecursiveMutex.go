@@ -1,4 +1,4 @@
-package TokenRecursiveMutex
+package day08
 
 import (
 	"fmt"

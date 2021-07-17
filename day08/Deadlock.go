@@ -9,9 +9,9 @@ import (
 func main() {
 
 	// 派出所证明 
-	var psCertificate RecursiveMutex
+	var psCertificate sync.Mutex
 	// 物业证明 
-	var propertyCertificate RecursiveMutex
+	var propertyCertificate sync.Mutex
 
 	var wg sync.WaitGroup 
 	
