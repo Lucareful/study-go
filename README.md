@@ -76,6 +76,8 @@
 ├── day08
 │   ├── 02.RecursiveMutex.go
 │   ├── 03.TokenRecursiveMutex.go
+│   ├── 04.TryLock.go
+│   ├── 05.SliceQueen.go
 │   ├── Deadlock.go
 │   └── Mutex使用.go
 ├── go.mod
