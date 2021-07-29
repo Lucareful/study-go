@@ -11,6 +11,7 @@ func main() {
 
 	println("指针地址是", namePtr)
 	println("指针内容是", *namePtr)
+	println("指针的内容", namePtr)
 
 	// 定义指针关键字 new，方式二
 	name2Ptr := new(string)

@@ -39,6 +39,4 @@ func main() {
 	f.SetCellValue("Sheet1", "A3", "Hello world.")
 	f.SetCellValue("Sheet1", "B3", 100)
 
-
-
 }

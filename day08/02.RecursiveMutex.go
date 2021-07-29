@@ -1,4 +1,4 @@
-package day08
+package main
 
 import (
 	"fmt"
@@ -14,6 +14,7 @@ type RecursiveMutex struct {
 	owner     int64
 	recursion int32
 }
+
 // Lock 上锁
 func (m *RecursiveMutex) Lock() {
 	gid := goid.Get()
@@ -29,6 +30,7 @@ func (m *RecursiveMutex) Lock() {
 
 	m.recursion = 1
 }
+
 // Unlock 解锁
 func (m *RecursiveMutex) Unlock() {
 	gid := goid.Get()
