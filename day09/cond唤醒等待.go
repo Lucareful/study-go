@@ -12,7 +12,7 @@ func main() {
 	c := sync.NewCond(&sync.Mutex{})
 	var ready int
 
-	for i := 0; i <10 ; i++ {
+	for i := 0; i < 10; i++ {
 
 		go func(i int) {
 			time.Sleep(time.Duration(rand.Int63n(10)) * time.Second)
@@ -28,7 +28,7 @@ func main() {
 	}
 
 	c.L.Lock()
-	for ready!= 10{
+	for ready != 10 {
 		c.Wait()
 		log.Printf("裁判员被唤醒一次")
 	}
