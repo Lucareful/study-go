@@ -27,7 +27,7 @@ func (o *Once) slowDone(f func() error) error {
 	defer o.m.unlock()
 
 	var err error
-	if o.done == 0 {
+	if o.done == 0 { // 双检查，还没有被初始化
 		if err = f(); err == nil {
 			// 初始化成功标记为 1
 			atomic.StoreUint32(&o.done, 1)
