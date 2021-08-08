@@ -16,5 +16,4 @@ func main() {
 	res := sub.Sub(20, 10)
 	fmt.Println("sub res", res)
 
-
 }

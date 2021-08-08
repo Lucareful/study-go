@@ -17,7 +17,7 @@ func main() {
 	fmt.Printf("追加元素前 长度是 %d 容量是 %d \n", len(names), cap(names))
 
 	// 在一定量级的时候,动态追加元素, 容量一般是2倍增长
-	num1 := [] int {}
+	num1 := []int{}
 	for i := 0; i < 50; i++ {
 		num1 = append(num1, i)
 		fmt.Printf("长度 %d 容量 %d \n", len(num1), cap(num1))

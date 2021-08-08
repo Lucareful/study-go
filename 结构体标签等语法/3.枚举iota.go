@@ -9,8 +9,7 @@ import "fmt"
 
 // 每个常量组的iota是独立的，都是从零开始递增
 
-const
-(
+const (
 	MONDAY = iota // 0
 	TUESDAY
 	WEDNESDAY
@@ -24,8 +23,7 @@ const
 // go语言中没有枚举类型，但是可以使用 const + iota（常量累加器）来进行模拟
 func main() {
 	// 变量组统一命名变量
-	var
-	(
+	var (
 		number int
 		name   string
 		flag   bool

@@ -35,7 +35,7 @@ func main() {
 	// map无法通过获取value来判断这个对应的key是否存在
 	// 可用过下面方法来确定是否存在key  ok -》 bool值
 	value, ok := idName[99]
-	fmt.Println("ok值为",ok)
+	fmt.Println("ok值为", ok)
 	if ok {
 		fmt.Println("idname[99]存在,值为", value)
 	} else {
@@ -44,8 +44,8 @@ func main() {
 
 	// 删除map中的元素
 	// 删除不存在的key也不会报错
-	delete(idName,0)
-	fmt.Println("删除后的map为",idName)
+	delete(idName, 0)
+	fmt.Println("删除后的map为", idName)
 
 	// 并发处理时需要对map进行上锁 TODO
 

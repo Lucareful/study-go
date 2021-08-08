@@ -12,8 +12,8 @@ func main() {
 	fmt.Printf("切片地址 %p \n", &loveCity[0])
 	loveCity[0] = "kk"
 
-	fmt.Println("修改元素",loveCity)
-	fmt.Println("citys",citys[0])
+	fmt.Println("修改元素", loveCity)
+	fmt.Println("citys", citys[0])
 
 	// 如果想拷贝一份独立与源数组的 使用自由函数 copy()
 	loveCitys := copy(loveCity, citys[:])

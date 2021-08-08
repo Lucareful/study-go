@@ -36,7 +36,7 @@ func main() {
 			return
 		}
 	}(MyClient.c)
-	
+
 	var resp string
 	err := MyClient.HelloWorld("luenci", &resp)
 	if err != nil {

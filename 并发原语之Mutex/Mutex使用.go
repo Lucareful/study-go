@@ -34,6 +34,7 @@ func main() {
 	main2()
 
 }
+
 // Counter 计数器
 type Counter struct {
 	id    int
@@ -48,6 +49,7 @@ func (c *Counter) Inc() {
 	c.count++
 	c.mu.Unlock()
 }
+
 // Count 统计
 func (c *Counter) Count() uint {
 	c.mu.Lock()
