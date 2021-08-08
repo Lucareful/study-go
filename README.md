@@ -5,10 +5,13 @@
 ```shell
 .
 ├── README.md
+├── chan编排模式
+│   ├── chan_fanin.go
+│   ├── chan_fanout.go
+│   └── chan_or-done.go
 ├── chan进阶使用
 │   ├── Token-channe任务编排.go
 │   ├── chan-wait&notify.go
-│   ├── chan_or-done.go
 │   ├── channel任务编排.go
 │   ├── chan实现锁.go
 │   ├── select-超时控制.go
