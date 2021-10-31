@@ -31,6 +31,7 @@ func Go(x func()) {
 				fmt.Println("goroutine2 panic 被捕获")
 			}
 		}()
+		// 在同一 goroutine 中去捕获 panic
 		x()
 	}()
 }
