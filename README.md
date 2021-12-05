@@ -53,6 +53,9 @@
 ├── run-go-vet.sh
 ├── runtime调用堆栈信息
 │   └── main.go
+├── wire依赖注入
+│   ├── case1
+│   └── case2
 ├── 基础语法
 │   ├── 1.txt
 │   ├── 1.变量.go
